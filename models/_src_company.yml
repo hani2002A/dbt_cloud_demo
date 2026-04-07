@@ -1,0 +1,12 @@
+sources:
+  - name: company_src
+    database: HANI_CLOUD
+    schema: RAW_HANI_SCHEMA 
+    tables:
+      - name: HR 
+      - name: FINANCE
+      - name: IT
+      - name: EMPLOYEES
+      - name: ALL_DEPT_DATA
+  
+      
