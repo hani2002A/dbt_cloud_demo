@@ -77,4 +77,4 @@ WHERE table_schema ILIKE 'DBT_HANI'
 
     {{ union_sql | join(' UNION ALL ') }}
 
-{% endif %}
+{% endif %}}}
