@@ -6,27 +6,27 @@
 
 WITH source_data AS (
 
-    SELECT 
+    SELECT
         EMP_ID,
         EMP_NAME,
         SALARY,
         DEPARTMENT,
         MD5(CONCAT_WS('|', EMP_ID, EMP_NAME, SALARY, DEPARTMENT)) AS ROW_HASH
-    FROM {{ source('company_src', 'HR') }}
+    FROM {{ source('shop_src', 'HR') }}
 
     UNION ALL
 
-    SELECT 
+    SELECT
         EMP_ID,
         EMP_NAME,
         SALARY,
         DEPARTMENT,
         MD5(CONCAT_WS('|', EMP_ID, EMP_NAME, SALARY, DEPARTMENT)) AS ROW_HASH
-    FROM {{ source('company_src', 'IT') }}
+    FROM {{ source('shop_src', 'IT') }}
 
     UNION ALL
 
-    SELECT 
+    SELECT
         EMP_ID,
         EMP_NAME,
         SALARY,
